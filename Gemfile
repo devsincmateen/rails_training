@@ -59,6 +59,7 @@ group :test do
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
 end
-
+gem 'capistrano', '~> 2.11.2'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'devise'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
