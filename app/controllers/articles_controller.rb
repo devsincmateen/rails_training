@@ -2,6 +2,14 @@
 
 # Articles controller
 class ArticlesController < ApplicationController
+  around_action :helloworld, only: :index
+
+  def helloworld
+    print 'I am around action'
+    yield
+    
+  end
+
   def new
     @article = Article.new
   end
@@ -34,6 +42,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
+    # yield
     @articles = Article.all
   end
 

@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'products/index'
+  get 'products/show'
   get 'welcome/index'
   resources :articles do
     resources :comments
