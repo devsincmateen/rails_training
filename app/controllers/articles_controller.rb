@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
   def helloworld
     print 'I am around action'
     yield
-    
+
   end
 
   def new
@@ -37,11 +37,20 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def preview
+    @article = Article.find(params[:id])
+  end
+
   def show
     @article = Article.find(params[:id])
   end
 
   def index
+    # yield
+    @articles = Article.all
+  end
+
+  def all
     # yield
     @articles = Article.all
   end

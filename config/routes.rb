@@ -5,6 +5,12 @@ Rails.application.routes.draw do
   get 'products/show'
   get 'welcome/index'
   resources :articles do
+    member do
+      get :preview
+    end
+    collection do
+      get :all
+    end
     resources :comments
   end
   root 'welcome#index'
