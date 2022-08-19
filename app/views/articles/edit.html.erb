@@ -1,5 +1,9 @@
 <h1>Edit article</h1>
- 
-<%= render 'form' %>
+ <%= form_for @article do |f| %>
+  <%= text_field_tag f, @article.title %>
+  <%= text_field_tag f, @article.text %>
+  <%= f.submit  %>
+  
+<% end %>   
  
 <%= link_to 'Back', articles_path %>

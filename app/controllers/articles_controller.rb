@@ -41,6 +41,11 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+  def search
+    @article = Article.find(params[:query])
+    print 'Query check kr ra hai:' + params[:query]
+  end
+
   def show
     @article = Article.find(params[:id])
   end
