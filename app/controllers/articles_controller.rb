@@ -52,7 +52,7 @@ class ArticlesController < ApplicationController
 
   def all
     # yield
-    @articles = Article.all
+    @articles = Article.where(id: [1, 2, 4])
   end
 
   def destroy
