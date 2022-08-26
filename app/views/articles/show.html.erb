@@ -15,3 +15,11 @@
  
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>
+
+<%= form_with model: @article do |person_form| %>
+  <%= person_form.title :title %>
+  <%= fields_for :text, @person.text do |contact_detail_form| %>
+    <%= contact_detail_form.text :phone_number %>
+  <% end %>
+<% end %>
+<%= %>

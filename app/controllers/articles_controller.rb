@@ -38,6 +38,9 @@ class ArticlesController < ApplicationController
   end
 
   def preview
+    @man= Man.all
+    print "sebdksdkadladkjakjfakjkjdccnzdkcn"
+    print @man 
     @article = Article.find(params[:id])
   end
 
